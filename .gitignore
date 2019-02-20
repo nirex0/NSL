@@ -36,3 +36,7 @@ src/NSL/.vs/NSL/v15/.suo
 *.opendb
 *.log
 *.lastbuildstate
+*.ilk
+*.pdb
+*.tlog
+*.idb
