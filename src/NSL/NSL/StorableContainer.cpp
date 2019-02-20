@@ -1,6 +1,7 @@
 // © 2019 NIREX ALL RIGHTS RESERVED
 
 #include "StorableContainer.h"
+#include "IStorable.h"
 #include "FileUtils.h"
 #include "StrUtils.h"
 
@@ -16,6 +17,20 @@ namespace NSL
 	void StorableContainer::Unregister(IStorable* IN storableObject)
 	{
 		globalRegistry.erase(storableObject);
+	}
+
+	void StorableContainer::SaveToFile(const std::string& IN path)
+	{
+		std::map<NSL::IStorable*, std::string> myMap;
+		NSL::StorableContainer::SaveAll(myMap);
+		NSL::StorableContainer::ToFile(path, myMap);
+	}
+
+	void StorableContainer::LoadFromFile(const std::string& IN path)
+	{
+		std::map<NSL::IStorable*, std::string> myMap;
+		NSL::StorableContainer::FromFile(path, myMap);
+		NSL::StorableContainer::LoadAll(myMap);
 	}
 
 	void StorableContainer::SaveAll(std::map<IStorable*, std::string>& OUT emptyOutMap)

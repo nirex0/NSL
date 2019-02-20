@@ -4,7 +4,6 @@
 #define _N_STORABLE_CONTAINER_H_
 
 #include "systemdefines.h"
-#include "IStorable.h"
 
 #include <set>
 #include <map>
@@ -12,12 +11,18 @@
 
 namespace NSL
 {
+	class IStorable;
+
 	UTILITY_CLASS class NAPI StorableContainer final
 	{
 	public:
 		UTILITY void Register(IStorable* IN storableObject);
 		UTILITY void Unregister(IStorable* IN storableObject);
 
+		UTILITY void SaveToFile(const std::string& IN path);
+		UTILITY void LoadFromFile(const std::string& IN path);
+
+	private:
 		UTILITY void SaveAll(std::map<IStorable*, std::string>& OUT emptyOutMap);
 		UTILITY void LoadAll(const std::map<IStorable*, std::string>& OUT emptyOutMap);
 
