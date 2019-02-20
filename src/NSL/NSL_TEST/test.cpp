@@ -4,7 +4,8 @@
 
 #include <NSL\StorableContainer.h>
 
-test::test(void)
+test::test(const std::string& uid)
+	: unique_id(uid)
 {
 	NSL::StorableContainer::Register(this);
 }
@@ -12,6 +13,16 @@ test::test(void)
 test::~test(void)
 {
 	NSL::StorableContainer::Unregister(this);
+}
+
+std::string test::GetHiddenData(void) const
+{
+	return hiddenData;
+}
+
+void test::SetHiddenData(const std::string& val)
+{
+	hiddenData = val;
 }
 
 HRESULT test::Store(std::string& OUT str)
@@ -28,5 +39,5 @@ HRESULT test::Retrieve(const std::string& IN str)
 
 std::string test::UniqueID(void)
 {
-	return "A";
+	return unique_id;
 }

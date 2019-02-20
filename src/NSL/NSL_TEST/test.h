@@ -9,15 +9,20 @@
 class test : public NSL::IStorable
 {
 public:
-	test(void);
+	test(const std::string& uid);
 	~test(void);
 
+	std::string GetHiddenData(void) const;
+	void SetHiddenData(const std::string& val);
+
+protected:
 	virtual HRESULT Store(std::string& OUT str) override;
 	virtual HRESULT Retrieve(const std::string& IN str) override;
 	virtual std::string UniqueID(void) override;
 
-public:
+private:
 	std::string hiddenData;
+	std::string unique_id;
 };
 
 #endif // !_N_TEST_H_
