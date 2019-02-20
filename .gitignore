@@ -40,3 +40,4 @@ src/NSL/.vs/NSL/v15/.suo
 *.pdb
 *.tlog
 *.idb
+*.exp
