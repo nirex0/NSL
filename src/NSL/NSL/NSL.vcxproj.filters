@@ -19,6 +19,12 @@
     <Filter Include="Header Files\Interfaces">
       <UniqueIdentifier>{c4c6d8b5-a0f8-49cc-93c8-84298447cedc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Utility">
+      <UniqueIdentifier>{b347d3d7-163b-4bb7-8865-5d94604316bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utility">
+      <UniqueIdentifier>{3134e227-e285-4f8e-af9f-b771b7ca92e8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="systemdefines.h">
@@ -30,5 +36,19 @@
     <ClInclude Include="nwin.h">
       <Filter>Header Files\System</Filter>
     </ClInclude>
+    <ClInclude Include="StrUtils.h">
+      <Filter>Header Files\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="FileUtils.h">
+      <Filter>Header Files\Utility</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="StrUtils.cpp">
+      <Filter>Source Files\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="FileUtils.cpp">
+      <Filter>Source Files\Utility</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
