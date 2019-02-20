@@ -7,20 +7,55 @@
 #include <NSL\IStorable.h>
 #include <NSL\StorableContainer.h>
 
-int main()
-{
-	test x;
-	x.hiddenData = "ABC";
-	
-	std::map<NSL::IStorable*, std::string> myMap;
-	NSL::StorableContainer::SaveAll(myMap);
-	NSL::StorableContainer::ToFile("p.txt", myMap);
+void Save(void);
+void Load(void);
 
-	std::map<NSL::IStorable*, std::string> myMap;
-	NSL::StorableContainer::FromFile("p.txt", myMap);
-	NSL::StorableContainer::LoadAll(myMap);
-	
-	std::cout << x.hiddenData;
+auto main(int argc, char** argv) -> int
+{
+	Load();
 	std::getchar();
-	return 0;
+	return false;
+}
+
+void Save(void)
+{
+	test x0("1");
+	x0.SetHiddenData("10");
+	
+	test x1("2");
+	x1.SetHiddenData("15");
+	
+	test x2("3");
+	x2.SetHiddenData("20");
+	
+	test x3("4");
+	x3.SetHiddenData("25");
+
+	NSL::StorableContainer::SaveToFile("1.txt");
+}
+
+void Load(void)
+{
+	test x0("1");
+
+	test x1("2");
+
+	test x2("3");
+
+	test x3("4");
+
+	NSL::StorableContainer::LoadFromFile("1.txt");
+
+	std::cout << x0.GetHiddenData() << std::endl;
+	std::getchar();
+
+	std::cout << x1.GetHiddenData() << std::endl;
+	std::getchar();
+
+	std::cout << x2.GetHiddenData() << std::endl;
+	std::getchar();
+
+	std::cout << x3.GetHiddenData() << std::endl;
+	std::getchar();
+
 }
