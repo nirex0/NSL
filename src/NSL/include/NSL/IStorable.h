@@ -4,6 +4,7 @@
 #define _I_STORABLE_H_
 
 #include "systemdefines.h"
+#include "StorableContainer.h"
 #include <string>
 
 typedef long HRESULT;
@@ -15,7 +16,7 @@ namespace NSL
 	// Main Interface for all the classes that need to have saving and loading functionality.
 	class NAPI IStorable
 	{
-	public:
+	protected:
 		//-->DOC_FUNC
 		// Store the data within the class in a string
 		// OUT str: put the calculated string inside the str argument
@@ -31,6 +32,9 @@ namespace NSL
 		//-->DOC_FUNC
 		// returns: the unique id set for that specific instance of the IStorable class
 		virtual std::string UniqueID(void) PURE;
+
+	private:
+		friend StorableContainer;
 	};
 }
 
