@@ -25,6 +25,12 @@
     <Filter Include="Source Files\Utility">
       <UniqueIdentifier>{3134e227-e285-4f8e-af9f-b771b7ca92e8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Container">
+      <UniqueIdentifier>{56508937-865b-4652-a381-7510d7d6f50f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Container">
+      <UniqueIdentifier>{11dab688-bc15-4e99-8a49-182033e078a1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="systemdefines.h">
@@ -42,6 +48,9 @@
     <ClInclude Include="FileUtils.h">
       <Filter>Header Files\Utility</Filter>
     </ClInclude>
+    <ClInclude Include="StorableContainer.h">
+      <Filter>Header Files\Container</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="StrUtils.cpp">
@@ -49,6 +58,9 @@
     </ClCompile>
     <ClCompile Include="FileUtils.cpp">
       <Filter>Source Files\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="StorableContainer.cpp">
+      <Filter>Source Files\Container</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
