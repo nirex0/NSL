@@ -10,7 +10,6 @@
 #define NAPI __declspec(dllimport)
 #endif // _N_EXPORT_
 
-#define NSL
 #define VERSION 1
 
 #define OUT
@@ -18,5 +17,6 @@
 #define OPT_IN
 #define OPT_OUT
 #define PURE = 0
+#define UTILITY static
 
 #endif // !_N_SYSTEM_DEFINES_H_
