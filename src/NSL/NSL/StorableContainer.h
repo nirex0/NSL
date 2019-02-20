@@ -14,6 +14,7 @@ namespace NSL
 {
 	UTILITY_CLASS class NAPI StorableContainer final
 	{
+	public:
 		UTILITY void Register(IStorable* IN storableObject);
 		UTILITY void Unregister(IStorable* IN storableObject);
 
