@@ -18,5 +18,6 @@
 #define OPT_OUT
 #define PURE = 0
 #define UTILITY static
+#define UTILITY_CLASS 
 
 #endif // !_N_SYSTEM_DEFINES_H_

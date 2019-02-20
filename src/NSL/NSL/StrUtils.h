@@ -11,7 +11,7 @@
 
 namespace NSL
 {
-	class NAPI StrUtils final
+	UTILITY_CLASS class NAPI StrUtils final
 	{
 	public:
 		static char* ToUpper(char* temp);

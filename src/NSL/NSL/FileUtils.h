@@ -12,7 +12,7 @@ namespace NSL
 {
 	//-->DOC_CLASS
 	// File IO Utility class
-	class FileUtils final
+	UTILITY_CLASS class FileUtils final
 	{
 	public:
 		UTILITY std::string ReadAllText(const std::string& file);
